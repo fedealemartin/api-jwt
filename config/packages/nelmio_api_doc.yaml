@@ -1,0 +1,77 @@
+nelmio_api_doc:
+    documentation:
+        info:
+            title: Demo
+            description: Examen app!
+            version: 1.0.0
+        paths:
+
+            /api/register:
+              post:
+                description: Crea un usuario
+                tags:
+                  - User
+                requestBody:
+                  content:
+                    application/json:
+                      schema:
+                        type: object
+                        properties:
+                          username: {type: string, example: 'pepe'}
+                          password: {type: string, example: 'privada'}
+
+                responses:
+                  201:
+                    description: User created
+                    content:
+                      application/json:
+                        schema:
+                          type: object
+                          properties:
+                            message: {type: string, example: 'Registered Successfully'}
+
+            /api/login_check:
+              post:
+                description: autentica un usuario
+                tags:
+                  - Login
+                requestBody:
+                  content:
+                    application/json:
+                      schema:
+                        type: object
+                        properties:
+                          username: {type: string, example: 'pepe'}
+                          password: {type: string, example: 'privada'}
+
+                responses:
+                  201:
+                    description: Token de login
+                    content:
+                      application/json:
+                        schema:
+                          type: object
+                          properties:
+                            token: {type: string, example: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9...'}
+
+            /api/ciudades:
+              get:
+                description: Trae el listado de ciudades
+                tags:
+                  - Ciudad
+                responses:
+                  201:
+                    description: Devuelve una lista de ciudades
+                    content:
+                      application/json:
+                        schema:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                             ciudad: {type: string, example: 'Oran'}
+                             provincia: {type: string, example: 'Salta'}
+
+    areas: # to filter documented areas
+        path_patterns:
+            - ^/api(?!(/doc|/doc.json|/contexts|docs|/default)$) # Accepts routes under /api except /api/doc
