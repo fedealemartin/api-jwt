@@ -16,6 +16,12 @@ Body
   "password": "12345"
 }
 
+Respuesta
+
+{
+    "message": "Registered Successfully"
+}
+
 # Autenticar un usuario en la API por POST
 
 http://localhost:7000/api/login_check 
@@ -27,7 +33,7 @@ Body Post
   "password": "12345"
 }
 
-Response
+Respuesta
 
 {
 "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MDEwNzYyNDIsImV4cCI6MTcwMTA3OTg0Miwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImZlZGUifQ.F364cuJwSKBbwPC4novRK4P9SThId_VWK4o-a5PQHFQAUkTzYxglYQFHEpPNLfe4qPkRJFkM6Ufec8Hxd-8JoaJttY1gHRasq1TvdrJGkmi-naqZoGwK-kH_PXy5BZ1spBr-2FOvGNIpXex43VuKcjenIuaUf3M4wmz0uwtb_YdhQRcFOt431l9qtt0eOEJOidD-Uyxn4T5NCZSca0Y2YeG-DnQngeUGxkI1zPrCLFmgUS4qO5AjcGmXNQXdSQx63t6yKSIft3JOo6s1v5yQXtS60xpgMmUyGIQpNgzoaov53tISMmR__CYahsphXSiHUpkWcnK6WZW-Bx_C1Rf31g"
@@ -44,6 +50,22 @@ token = eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MDEwNzYyNDIsImV4cCI6MTc
 
 http://localhost:7000/api/ciudades
 
+Respuesta
+
+[
+    {
+        "ciudad": "Salta Capital",
+        "provincia": "Salta"
+    },
+    {
+        "ciudad": "San Salvador de Jujuy",
+        "provincia": "Jujuy"
+    },
+    {
+        "ciudad": "San Migurl de Tucuman",
+        "provincia": "Tucuman"
+    }
+]
 
 
 # Consultar documentacion
