@@ -7,12 +7,18 @@ php -S localhost:7000 -t public
 
 # Registar un usuario en la API por POST
 
-localhost:7000/api/register
+http://localhost:7000/api/register
 
 # Autenticar un usuario en la API por POST
 
-localhost:7000/api/login_check
+http://localhost:7000/api/login_check
 
 # Consultar listado de ciudades
 
-localhost:7000/api/ciudades
+http://localhost:7000/api/ciudades
+
+# Consultar documentacion
+
+http://localhost:7000/api/doc
+
+
